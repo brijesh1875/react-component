@@ -1,0 +1,28 @@
+.custom-card {
+  border-radius: 2px;
+  border: none !important;
+  box-shadow: 0px 0px 1px #888888;
+}
+
+.blog-img {
+  width: 210px !important;
+  height: 140px;
+}
+
+.blog-img img {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.author-name {
+  color: #4089d7 !important;
+}
+
+.blog-summary {
+  font-size: small;
+}
