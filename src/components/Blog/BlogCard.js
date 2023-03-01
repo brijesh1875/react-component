@@ -14,7 +14,7 @@ export default function BlogCard(props) {
           <div className="container-fluid">
             <div className="row">
               <div className="col-md-12">
-                <h3 className="card-title">{props.heading}</h3>
+                <h4 className="card-title fw-semibold">{props.heading}</h4>
                 <span className="blog-summary">
                   by <span className="author-name">{props.author}</span>{" "}
                   {props.addedOn}

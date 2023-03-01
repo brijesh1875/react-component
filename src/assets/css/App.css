@@ -1,12 +1,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;500&display=swap");
 :root {
-  --light-body-color: #E8EEF3;
+  --light-body-color: #e8eef3;
   --light-card-color: #ffffff;
   --dark-card-color: #191919;
   --dark-body-color: #111111;
   --logo-weight: 700;
   --text-dark: #111111;
   --text-light: #9b3838;
+  --insta-bg-color-1: #ffb13d;
+  --insta-bg-color-2: #dd277b;
+  --insta-bg-color-3: #4d5ed4;
+  --insta-bg-gradient: linear-gradient(
+    15deg,
+    var(--insta-bg-color-1),
+    var(--insta-bg-color-2),
+    var(--insta-bg-color-3)
+  );
+
+  --btn-text-color: #ffffff;
+
+  --twitter-bg-color: #55b4f0;
+  --facebook-bg-color: #4d6aa4;
+  --youtube-bg-color: #ed2d23;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: inherit !important;
 }
 
 * {

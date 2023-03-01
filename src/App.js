@@ -4,6 +4,7 @@ import "./assets/css/App.css";
 import React, { useState } from "react";
 import Container from "./components/UI/Container";
 import BlogContent from "./components/Blog/BlogContent";
+import SideContent from "./components/SideContent/SideContent";
 function App() {
   document.getElementById("body").classList.add("body-light");
   const [mode, setMode] = useState(false);
@@ -22,7 +23,7 @@ function App() {
   return (
     <Router>
       <Header mode={mode} switchMode={switchMode} />
-      <Container left={<BlogContent mode={mode} />} right="test-right" />
+      <Container left={<BlogContent mode={mode} />} right={<SideContent />} />
     </Router>
   );
 }
