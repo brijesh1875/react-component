@@ -6,7 +6,7 @@
   --dark-body-color: #111111;
   --logo-weight: 700;
   --text-dark: #111111;
-  --text-light: #9b3838;
+  --text-light: #ffffff;
   --insta-bg-color-1: #ffb13d;
   --insta-bg-color-2: #dd277b;
   --insta-bg-color-3: #4d5ed4;
@@ -61,4 +61,15 @@ a:visited {
 
 .toggle-mode:hover {
   cursor: pointer;
+}
+.popular-img {
+  border-radius: 5px;
+}
+
+.person-img {
+  border-radius: 50%;
+}
+
+a li:hover {
+  background-color: rgb(241, 237, 237);
 }

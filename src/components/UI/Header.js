@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 export default function Header(props) {
   return (
@@ -9,14 +10,14 @@ export default function Header(props) {
         }`}
       >
         <div className="container">
-          <a
+          <Link
             className={`navbar-brand b-500 text-${
               props.mode ? "light" : "dark"
             }`}
-            href="/"
+            to="/"
           >
             TruTravel
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -31,28 +32,31 @@ export default function Header(props) {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a
+                <Link
                   className={`nav-link active text-${
                     props.mode ? "light" : "dark"
                   }`}
                   aria-current="page"
-                  href="/"
+                  to="/"
                 >
                   Home
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a
+                <Link
                   className={`nav-link text-${props.mode ? "light" : "dark"}`}
-                  href="/"
+                  to="/about"
                 >
                   About Us
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className={`nav-link text-${props.mode ? "light" : "dark"}`} href="/">
+                <Link
+                  className={`nav-link text-${props.mode ? "light" : "dark"}`}
+                  to="/contact"
+                >
                   Contact Us
-                </a>
+                </Link>
               </li>
             </ul>
             <div className="mx-4">

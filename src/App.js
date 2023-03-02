@@ -1,10 +1,12 @@
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/UI/Header";
 import "./assets/css/App.css";
 import React, { useState } from "react";
 import Container from "./components/UI/Container";
 import BlogContent from "./components/Blog/BlogContent";
 import SideContent from "./components/SideContent/SideContent";
+import Footer from "./components/UI/Footer";
+import About from "./components/About/About";
 function App() {
   document.getElementById("body").classList.add("body-light");
   const [mode, setMode] = useState(false);
@@ -20,10 +22,37 @@ function App() {
       element.classList.add("body-dark");
     }
   };
+  const content = {
+    blog: <BlogContent mode={mode} />,
+    about: <About mode={mode} />,
+  };
+
   return (
     <Router>
       <Header mode={mode} switchMode={switchMode} />
-      <Container left={<BlogContent mode={mode} />} right={<SideContent />} />
+      <Routes>
+        <Route
+          exact
+          path="/"
+          element={
+            <Container
+              left={content.blog}
+              right={<SideContent mode={mode} />}
+            />
+          }
+        />
+        <Route
+          exact
+          path="/about"
+          element={
+            <Container
+              left={content.about}
+              right={<SideContent mode={mode} />}
+            />
+          }
+        />
+      </Routes>
+      <Footer mode={mode} />
     </Router>
   );
 }
