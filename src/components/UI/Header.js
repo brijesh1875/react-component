@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 export default function Header(props) {
   return (
@@ -32,31 +32,32 @@ export default function Header(props) {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link
-                  className={`nav-link active text-${
-                    props.mode ? "light" : "dark"
-                  }`}
+                <NavLink
+                  className={`nav-link text-${props.mode ? "light" : "dark"}`}
                   aria-current="page"
                   to="/"
+                  activeclassname="active"
                 >
                   Home
-                </Link>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <Link
+                <NavLink
                   className={`nav-link text-${props.mode ? "light" : "dark"}`}
                   to="/about"
+                  activeclassname="active"
                 >
                   About Us
-                </Link>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <Link
+                <NavLink
                   className={`nav-link text-${props.mode ? "light" : "dark"}`}
                   to="/contact"
+                  activeclassname="active"
                 >
                   Contact Us
-                </Link>
+                </NavLink>
               </li>
             </ul>
             <div className="mx-4">
